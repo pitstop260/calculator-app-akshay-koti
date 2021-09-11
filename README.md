@@ -57,4 +57,4 @@ I will update the app once i figure out how to make the calculator without the h
 ## Author
 
 - Website - [AKSHAY KOTI](https://pitstop260.github.io/freecodecamp5/)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@pitstop260](https://www.frontendmentor.io/profile/yourusername)
