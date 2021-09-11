@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body>
+    <div class="container1">
+      <div class="container2">
+        <nav>
+          <div class="logo">
+            <p>calc</p>
+          </div>
+          <div class="theme">
+            <div class="toggler">
+              <p>THEME</p>
+
+              <div class="labels">
+                <label for="toggle1">1</label>
+                <label for="toggle2">2</label>
+                <label for="toggle3">3</label>
+              </div>
+
+              <div class="inputs">
+                <input type="checkbox" name="toggle1" id="toggle1" checked />
+                <input type="checkbox" name="toggle2" id="toggle2" />
+                <input type="checkbox" name="toggle3" id="toggle3" />
+                <div class="red-slider">
+                  <div class="dot"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <main>
+          <div class="calculator">
+            <div class="maindisplay">
+              <input type="text" name="display" id="display" />
+            </div>
+            <div class="keyboard">
+              <div class="row1">
+                <input type="button" value="7" class="btn" />
+                <input type="button" value="8" class="btn" />
+                <input type="button" value="9" class="btn" />
+                <input type="button" value="DEL" id="del" class="btn" />
+              </div>
+              <div class="row2">
+                <input type="button" value="4" class="btn" />
+                <input type="button" value="5" class="btn" />
+                <input type="button" value="6" class="btn" />
+                <input type="button" value="+" class="btn" />
+              </div>
+              <div class="row3">
+                <input type="button" value="1" class="btn" />
+                <input type="button" value="2" class="btn" />
+                <input type="button" value="3" class="btn" />
+                <input type="button" value="-" class="btn" />
+              </div>
+              <div class="row4">
+                <input type="button" value="." class="btn" />
+                <input type="button" value="0" class="btn" />
+                <input type="button" value="/" class="btn" />
+                <!-- <input type="button" value="x" class="btn" /> -->
+                <button class="btn" value="*">X</button>
+              </div>
+              <div class="row5">
+                <input type="button" value="RESET" id="reset" class="btn" />
+                <input type="button" value="=" id="equal" class="btn" />
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >FRONTEND MENTOR</a
+        >. Coded by
+        <a href="https://pitstop260.github.io/freecodecamp5/" target="_blank"
+          >AKSHAY KOTI</a
+        >.
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
