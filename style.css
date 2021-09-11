@@ -1,0 +1,319 @@
+:root {
+  /*THEME 1*/
+  --Very_dark_desaturated_blue1: hsl(222, 26%, 31%); /*(main background)*/
+  --Very_dark_desaturated_blue2: hsl(
+    223,
+    31%,
+    20%
+  ); /*(toggle background, keypad background)*/
+  --Very_dark_desaturated_blue3: hsl(224, 36%, 15%); /*(screen background)*/
+
+  --Desaturated_dark_blue1: hsl(225, 21%, 49%); /*(key background)*/
+  --Desaturated_dark_blue2: hsl(224, 28%, 35%); /*(key shadow)*/
+
+  --Red: hsl(6, 63%, 50%); /*(key shadow)*/
+  --Dark_red: hsl(6, 70%, 34%); /*(key shadow)*/
+
+  --Light_grayish_orange: hsl(30, 25%, 89%); /*(key background)*/
+  --Grayish_orange: hsl(28, 16%, 65%); /*(key shadow)*/
+
+  /*TEXT*/
+  --Very_dark_grayish_blue: hsl(221, 14%, 31%);
+  --White: hsl(0, 0, 100%);
+
+  /*THEME 2*/
+  --Light_gray: hsl(0, 0%, 90%); /*(main background)*/
+  --Grayish_red: hsl(0, 5%, 81%); /*(toggle background, keypad background)*/
+  --Very_light_gray: hsl(0, 0%, 93%); /*(screen background)*/
+
+  --Dark_moderate_cyan: hsl(185, 42%, 37%); /*(key background)*/
+  --Very_dark_cyan: hsl(185, 58%, 25%); /*(key shadow)*/
+
+  --Orange: hsl(25, 98%, 40%); /*(key background, toggle)*/
+  --Dark_orange: hsl(25, 99%, 27%); /*(key shadow)*/
+
+  --Light_grayish_yellow: hsl(45, 7%, 89%); /*(key background)*/
+  --Dark_grayish_orange: hsl(35, 11%, 61%); /*(key shadow)*/
+
+  /*(text)*/
+  --Very_dark_grayish_yellow: hsl(60, 10%, 19%);
+  --White: hsl(0, 0, 100%);
+
+  /*THEME 3*/
+  --Very_dark_violet: hsl(268, 75%, 9%); /*(main background)*/
+  --Very_dark_violet: hsl(
+    268,
+    71%,
+    12%
+  ); /*(toggle background, keypad background, screen background)*/
+
+  --Dark_violet: hsl(281, 89%, 26%); /*(key background)*/
+  --Vivid_magenta: hsl(285, 91%, 52%); /*(key shadow)*/
+
+  --Pure_cyan: hsl(176, 100%, 44%); /*(key background, toggle)*/
+  --Soft_cyan: hsl(177, 92%, 70%); /*(key shadow)*/
+
+  --Very_dark_violet: hsl(268, 47%, 21%); /*(key background)*/
+  --Dark_magenta: hsl(290, 70%, 36%); /*(key shadow)*/
+
+  /*Text*/
+
+  --Light_yellow: hsl(52, 100%, 62%);
+  --Very_dark_blue: hsl(198, 20%, 13%);
+  --White: hsl(0, 0, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  background-color: var(--Very_dark_desaturated_blue1);
+}
+
+nav {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid white; */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.logo {
+  font-size: 32px;
+  color: white;
+}
+
+.toggler {
+  color: white;
+  display: grid;
+  grid-template-columns: 70px 70px;
+  grid-template-rows: 20px 20px;
+  grid-template-areas:
+    "theme labels"
+    "theme inputs";
+  margin-top: -7px;
+  /* border: 1px solid white; */
+}
+
+.toggler p {
+  grid-area: theme;
+  /* border: 1px solid black; */
+  /* text-align: right; */
+  align-self: flex-end;
+}
+
+.labels {
+  grid-area: labels;
+  /* border: 1px solid black; */
+  text-align: center;
+}
+
+.labels label {
+  margin: 0 4px 0 4px;
+}
+
+.inputs {
+  position: relative;
+  grid-area: inputs;
+  /* border: 1px solid black; */
+  text-align: center;
+}
+
+.inputs input {
+  cursor: pointer;
+  margin: 10px 2px 0 2px;
+  transform: scale(2);
+  opacity: 0;
+  z-index: 1;
+}
+
+.red-slider {
+  /* display: none; */
+  border-radius: 20px;
+  padding: 5px;
+  width: 70px;
+  background-color: var(--Very_dark_desaturated_blue2);
+  position: absolute;
+  top: 6.5%;
+  right: 0%;
+  z-index: -1;
+  transition: all 0.2s ease;
+}
+
+.red-slider div {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.calculator {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* align-content: center; */
+}
+
+.maindisplay {
+  grid-area: display;
+  width: 90%;
+  /* border: 1px solid black; */
+}
+
+.maindisplay input {
+  width: 100%;
+  background-color: var(--Very_dark_desaturated_blue3);
+  border-radius: 10px;
+  height: 100px;
+  /* direction: rtl; */
+  text-align: right;
+  color: white;
+  border: none;
+  font-size: 32px;
+  padding: 10px;
+}
+
+.keyboard {
+  background-color: var(--Very_dark_desaturated_blue2);
+  height: 75%;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+
+.row1,
+.row2,
+.row3,
+.row4,
+.row5 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-bottom: -20px; */
+  /* border: 1px solid white; */
+}
+
+.btn {
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  font-size: 32px;
+  background-color: var(--Light_grayish_orange);
+  box-shadow: 0 5px var(--Grayish_orange);
+  color: hsl(221, 14%, 31%);
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:active {
+  transform: translateY(4px);
+}
+
+.row5 input {
+  width: 140px;
+  height: 70px;
+}
+
+#reset,
+#del {
+  font-size: 20px;
+  color: white;
+  background-color: var(--Desaturated_dark_blue1);
+  box-shadow: 0 5px var(--Desaturated_dark_blue2);
+}
+
+#equal {
+  color: white;
+  background-color: red;
+  box-shadow: 0 5px var(--Dark_red);
+}
+
+footer {
+  color: hsl(30, 25%, 89%);
+}
+
+footer a {
+  text-decoration: none;
+  color: hsl(28, 16%, 65%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+@media only screen and (min-width: 700px) {
+  .container1 {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+  }
+  .container2 {
+    margin: 0 auto;
+    width: 40%;
+  }
+  nav {
+    padding-left: 0;
+    padding-right: 0;
+    /* justify-content: flex-end; */
+    margin: 0 auto;
+  }
+  main {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .maindisplay {
+    width: 100%;
+  }
+  .keyboard {
+    margin-top: 20px;
+    height: 80%;
+    width: 100%;
+  }
+  .row1,
+  .row2,
+  .row3,
+  .row4,
+  .row5 {
+    margin: 0 auto;
+    /* border: 1px solid black; */
+    width: 100%;
+    /* height: 50px; */
+  }
+  .btn {
+    width: 60px;
+    height: 40px;
+    margin: 10px;
+    font-size: 32px;
+  }
+  .row5 input {
+    width: 140px;
+    height: 35px;
+  }
+  .attribution {
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-height: 600px) and (max-width: 700px) {
+  .keyboard {
+    margin-top: 20px;
+    height: 100%;
+  }
+  .attribution {
+    margin-top: 140px;
+    margin-bottom: 20px;
+  }
+}
