@@ -125,6 +125,34 @@ toggle3.addEventListener("click", function (e) {
 
 // CALCULATOR
 
+function calculate(operands, operators) {
+  if (operators.includes("/")) {
+    const div = operators.indexOf("/");
+    operands[div] /= operands[div + 1];
+    operands.splice(div + 1, 1);
+    operators.splice(div, 1);
+  }
+  if (operators.includes("*")) {
+    const mul = operators.indexOf("*");
+    operands[mul] *= operands[mul + 1];
+    operands.splice(mul + 1, 1);
+    operators.splice(mul, 1);
+  }
+  if (operators.includes("+")) {
+    const add = operators.indexOf("+");
+    operands[add] = Number(operands[add]) + Number(operands[add + 1]);
+    operands.splice(add + 1, 1);
+    operators.splice(add, 1);
+  }
+  if (operators.includes("-")) {
+    const sub = operators.indexOf("-");
+    operands[sub] -= operands[sub + 1];
+    operands.splice(sub + 1, 1);
+    operators.splice(sub, 1);
+  }
+  return operands[0];
+}
+
 btn.forEach((el) => {
   el.addEventListener("click", function (e) {
     const value = display.value;
@@ -133,8 +161,22 @@ btn.forEach((el) => {
       arr.pop();
       display.value = arr.join("");
     } else if (el.value === "=") {
+      let arr1 = display.value;
+      let arr2 = [...display.value];
+
+      const operands = arr1.split(/[+,\-\,*,/]/);
+
+      let operators = arr2
+        .map((el) => {
+          if (el === "+" || el === "-" || el === "*" || el === "/") {
+            return el;
+          }
+        })
+        .filter((item) => item);
+
       display.value =
-        Math.round((eval(display.value) + Number.EPSILON) * 100) / 100;
+        Math.round((calculate(operands, operators) + Number.EPSILON) * 10000) /
+        10000;
     } else if (el.value === "RESET") display.value = "";
     else if (
       Number(value[value.length - 1]) === 0 ||
