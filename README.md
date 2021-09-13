@@ -49,10 +49,12 @@ Users should be able to:
 
 ### What I learned
 
-I'am still new to JavaScript and currently learning it on udemy, This calculator app required me to make a theme toggler which was quite easy but the main struggle for me was to make the calculator itself i still haven't figured it out but for the time being i have used the ```js eval() ``` function, I will update the app once i figure out how to make the calculator without the help of ```js eval() ``` function.
+I'am still new to JavaScript and currently learning it on udemy, This calculator app required me to make a theme toggler which was quite easy but the main struggle for me was to make the calculator itself i still haven't figured it out but for the time being i have used the JavaScript ``` eval() ``` function, I will update the app once i figure out how to make the calculator without the help of JavaScript ``` eval() ``` function.
+
+EDIT: I figured out the way to make the calculator without the help of JavaScript ``` eval() ``` function. I learnt REGULAR EXPRESSIONS (regex) which made the stuff a lot easier.
 
 ### Continued development
-I will update the app once i figure out how to make the calculator without the help of ```js eval() ``` function.
+I will update the app once i figure out how to make the calculator without the help of JavaScript ``` eval() ``` function.
 
 ## Author
 
